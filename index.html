@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝘒𝘦𝘳𝘰𝘓𝘶𝘰𝘯𝘨</title>
+    <link rel="icon" type="image/x-icon" href="avt.jpg">
+    <style>
+        body {                               /* Đặt kiểu cho toàn bộ trang */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-container {                 /* Khung chứa thông tin cá nhân */
+            max-width: 900px    ;               /* Chiều rộng tối đa */
+            width: 100%;                       /* Chiều rộng đầy đủ */
+            background-color: #c4424259;   /* Màu nền với độ trong suốt */
+            border-radius: 10px;              /* Bo góc */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);      /* Đổ bóng */
+            overflow: hidden;                   /* Ẩn phần thừa */
+            position: relative;                 /* Đặt vị trí tương đối */
+            margin: 20px;                       /* Khoảng cách bên ngoài */
+        }
+ 
+        .header {                             /* Phần đầu trang */
+            background: linear-gradient(135deg, #001f3fcc, #007bffbb);
+            padding: 40px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .avatar {                              /* Ảnh đại diện */
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-top: -7px;
+            background-color: #ccc;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .info {                                  /* Thông tin cá nhân */
+            padding: 4x;
+            text-align: center;
+        }
+ 
+        .info h1 {                               /* Tên người dùng */
+            margin: 0;    
+            font-size: 24px;
+            
+            margin-bottom: 10px;    
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Thay đổi font chữ */
+        }
+
+        .info p {                                /* Các thông tin khác */
+            margin:  0;
+             font-size: 18px; /* Tăng font-size từ 16px lên 18px */
+            color: #1c0fd8;
+        }
+    </style>
+</head>
+<body>
+     <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="video.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ video.
+        </video>
+    <style> 
+        .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Đưa video ra lớp sau cùng */
+      #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo video lấp đầy màn hình */
+}
+
+    </style>
+    </div>
+
+
+    <div class="profile-container">
+        <div class="header">
+            </div>
+        <img src="avt.jpg" alt="Avatar" class="avatar" id="avatar-image">                                                      
+        <div class="info">
+            <h1 id="user-name">NGUYỄN QUỐC LƯƠNG</h1>
+            
+            <p id="user-location">HỒ CHÍ MINH</p>
+            <p id="user-dob">01/04/2004</p>
+            <p id="user-job">Học sinh</p>
+        </div>
+    </div>
+
+  
+
+
+<div class="music-player horizontal">
+    <div class="album-cover">
+        <img src="album-art.jpg" alt="Album Cover">
+    </div>
+    <div class="player-content">
+        <div class="track-info">
+            <h2 id="track-title">Tên Bài Hát</h2>
+            <p id="track-artist">Nghệ Sĩ</p>
+        </div>
+        <div class="progress-container">
+            <div class="progress"></div>
+        </div>
+        <div class="duration-wrapper">
+            <span id="current-time">0:00</span>
+            <span id="total-time">0:00</span>
+        </div>
+        <div class="controls">
+            </div>
+        <div class="volume-container">
+            </div>
+    </div>
+    <style>
+    .music-player {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 600px; /* Tăng chiều rộng */
+    display: flex; /* Kích hoạt Flexbox */
+    align-items: center;
+    gap: 30px;
+}
+
+.album-cover {
+    width: 150px; /* Giảm kích thước ảnh bìa */
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.player-content {
+       max-width: 900px    ;               /* Chiều rộng tối đa */
+            width: 100%;                       /* Chiều rộng đầy đủ */
+            background-color: #c4424200;   /* Màu nền với độ trong suốt */
+            border-radius: 10px;              /* Bo góc */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);      /* Đổ bóng */
+            overflow: hidden;                   /* Ẩn phần thừa */
+            position: relative;                 /* Đặt vị trí tương đối */
+            margin: 20px;                       /* Khoảng cách bên ngoài */
+        }
+
+.track-info {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between; /* Căn đều các nút */
+    align-items: center;
+    margin-bottom: 0;
+}
+
+
+</style>
+</div>
+
+
+
+
+</body>
+</html>
