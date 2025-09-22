@@ -3,7 +3,13 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Ngăn thanh cuộn */
+    overflow-x: hidden; /* Ngăn thanh cuộn ngang */
+    background-color: #f0f2f5;
+    /* Cấu trúc Flexbox để căn giữa các container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .video-container {
@@ -12,22 +18,49 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Đưa video ra lớp sau cùng */
+    z-index: -1;
 }
 
 #background-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Đảm bảo video lấp đầy màn hình */
+    object-fit: cover;
 }
 
-.content {
-    color: white;
+/* Các style chính mà bạn thiếu */
+.profile-container {
+    max-width: 900px;
+    width: 90%;
+    background-color: #c4424259;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    margin: 20px 0; /* Đặt lề trên và dưới */
+    z-index: 1; /* Đảm bảo nó hiển thị trên video */
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 90%;
     z-index: 1;
-    text-align: center;
-    padding-top: 40vh;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.social-container a {
+    color: #333;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.social-container a:hover {
+    color: #007bff;
 }
 
 #music-toggle {
