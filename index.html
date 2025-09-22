@@ -1,287 +1,152 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝘒𝘦𝘳𝘰𝘓𝘶𝘰𝘯𝘨</title>
+    <link rel="icon" type="image/x-icon" href="avt.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝘒𝘦𝘳𝘰𝘓𝘶𝘰𝘯𝘨</title>
-    <link rel="icon" type="image/x-icon" href="avt.jpg">
+    
     <style>
-        body {                               /* Đặt kiểu cho toàn bộ trang */
+        /* CSS cho toàn bộ trang và các container */
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f2f5;
             display: flex;
+            flex-direction: column; /* Sắp xếp các container theo cột */
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
 
-        .profile-container {                 /* Khung chứa thông tin cá nhân */
-            max-width: 900px    ;               /* Chiều rộng tối đa */
-            width: 100%;                       /* Chiều rộng đầy đủ */
-            background-color: #c4424259;   /* Màu nền với độ trong suốt */
-            border-radius: 10px;              /* Bo góc */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);      /* Đổ bóng */
-            overflow: hidden;                   /* Ẩn phần thừa */
-            position: relative;                 /* Đặt vị trí tương đối */
-            margin: 20px;                       /* Khoảng cách bên ngoài */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
- 
-        .header {                             /* Phần đầu trang */
+
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-container {
+            max-width: 900px;
+            width: 90%; /* Dùng 90% thay cho 100% để có lề đẹp hơn */
+            background-color: #c4424259;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            margin: 20px;
+        }
+
+        .header {
             background: linear-gradient(135deg, #001f3fcc, #007bffbb);
             padding: 40px;
             color: #fff;
             text-align: center;
         }
 
-        .avatar {                              /* Ảnh đại diện */
+        .avatar {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             border: 4px solid #fff;
-            margin-top: -7px;
+            margin-top: -75px; /* Điều chỉnh lại margin cho phù hợp với kích thước mới */
             background-color: #ccc;
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .info {                                  /* Thông tin cá nhân */
-            padding: 4x;
+        .info {
+            padding: 40px; /* Sửa '4x' thành '40px' */
             text-align: center;
         }
- 
-        .info h1 {                               /* Tên người dùng */
-            margin: 0;    
+
+        .info h1 {
+            margin: 0;
             font-size: 24px;
-            
-            margin-bottom: 10px;    
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Thay đổi font chữ */
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #00FF00; /* Màu của h1 */
         }
 
-        .info p {                                /* Các thông tin khác */
-            margin:  0;
-             font-size: 18px; /* Tăng font-size từ 16px lên 18px */
+        .info p {
+            margin: 0;
+            font-size: 18px;
             color: #1c0fd8;
         }
-    </style>
-</head>
-<body>
-     <div class="video-container">
-        <video autoplay muted loop id="background-video">
-            <source src="video.mp4" type="video/mp4">
-            Trình duyệt của bạn không hỗ trợ video.
-        </video>
-    <style> 
-        .video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Đưa video ra lớp sau cùng */
-      #background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Đảm bảo video lấp đầy màn hình */
-}
 
-    </style>
-    </div>
-
-
-    <div class="profile-container">
-        <div class="header">
-            </div>
-        <img src="avt.jpg" alt="Avatar" class="avatar" id="avatar-image">                                                      
-        <div class="info">
-            <h1 id="user-name">NGUYỄN QUỐC LƯƠNG    </h1>
-            
-            <p id="user-location">PHÚ THỌ</p>
-            <p id="user-dob">01/04/2004</p>
-            <p id="user-job">NHẬT BẢN</p>
-            <style>    
-            .profile-container<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝘒𝘦𝘳𝘰𝘓𝘶𝘰𝘯𝘨</title>
-    <link rel="icon" type="image/x-icon" href="avt.jpg">
-    <style>
-        body {                               /* Đặt kiểu cho toàn bộ trang */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
+        .social-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            gap: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 90%;
         }
 
-        .profile-container {                 /* Khung chứa thông tin cá nhân */
-            max-width: 900px    ;               /* Chiều rộng tối đa */
-            width: 100%;                       /* Chiều rộng đầy đủ */
-            background-color: #c4424259;   /* Màu nền với độ trong suốt */
-            border-radius: 10px;              /* Bo góc */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);      /* Đổ bóng */
-            overflow: hidden;                   /* Ẩn phần thừa */
-            position: relative;                 /* Đặt vị trí tương đối */
-            margin: 20px;                       /* Khoảng cách bên ngoài */
-        }
- 
-        .header {                             /* Phần đầu trang */
-            background: linear-gradient(135deg, #001f3fcc, #007bffbb);
-            padding: 40px;
-            color: #fff;
-            text-align: center;
+        .social-container a {
+            color: #333;
+            font-size: 30px;
+            transition: color 0.3s ease;
         }
 
-        .avatar {                              /* Ảnh đại diện */
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            margin-top: -7px;
-            background-color: #ccc;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .info {                                  /* Thông tin cá nhân */
-            padding: 4x;
-            text-align: center;
-        }
- 
-        .info h1 {                               /* Tên người dùng */
-            margin: 0;    
-            font-size: 24px;
-            
-            margin-bottom: 10px;    
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Thay đổi font chữ */
-        }
-
-        .info p {                                /* Các thông tin khác */
-            margin:  0;
-             font-size: 18px; /* Tăng font-size từ 16px lên 18px */
-            color: #1c0fd8;
+        .social-container a:hover {
+            color: #007bff;
         }
     </style>
 </head>
 <body>
-     <div class="video-container">
+    <div class="video-container">
         <video autoplay muted loop id="background-video">
             <source src="video.mp4" type="video/mp4">
             Trình duyệt của bạn không hỗ trợ video.
         </video>
-    <style> 
-        .video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Đưa video ra lớp sau cùng */
-      #background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Đảm bảo video lấp đầy màn hình */
-}
-
-    </style>
     </div>
 
-
     <div class="profile-container">
-        <div class="header">
-            </div>
-        <img src="avt.jpg" alt="Avatar" class="avatar" id="avatar-image">                                                      
+        <div class="header"></div>
+        <img src="avt.jpg" alt="Avatar" class="avatar" id="avatar-image">
         <div class="info">
-            <h1 id="user-name">NGUYỄN QUỐC LƯƠNG    </h1>
-            
+            <h1 id="user-name">NGUYỄN QUỐC LƯƠNG</h1>
             <p id="user-location">PHÚ THỌ</p>
             <p id="user-dob">01/04/2004</p>
             <p id="user-job">NHẬT BẢN</p>
-            <style>    
-            .profile-container h1  {
-                color: #00FF00; /* Thay đổi mã màu này thành màu bạn muốn */
-}
-                
-            
-            
-            
-            </style>
         </div>
+    </div>
 
-        <audio id="background-music" loop>
+    <div class="social-container">
+        <a href="https://www.tiktok.com/@your_username" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.facebook.com/your_username" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://discord.gg/your_invite_code" target="_blank">
+            <i class="fab fa-discord"></i>
+        </a>
+    </div>
+
+    <audio id="background-music" loop>
         <source src="nhac.mp3" type="audio/mpeg">
     </audio>
 
     <button id="music-toggle">Bật Nhạc</button>
 
     <script src="script.js"></script>
-
-
-<div class="profile-container">
-    </div>
-        
-        <div class="social-container">
-    <a href="https://www.tiktok.com/@your_username" target="_blank">
-        <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://www.facebook.com/your_username" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://discord.gg/your_invite_code" target="_blank">
-        <i class="fab fa-discord"></i>
-    </a>
-<style> 
-.social-container {
-    display: flex; /* Sắp xếp các icon theo hàng ngang */
-    justify-content: center; /* Căn giữa các icon */
-    align-items: center;
-    gap: 20px; /* Tạo khoảng cách giữa các icon */
-    margin-top: 20px; /* Tạo khoảng cách với container phía trên */
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    width: 90%;
-}
-
-.social-container a {
-    color: #333; /* Màu mặc định của icon */
-    font-size: 30px; /* Kích thước của icon */
-    transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu khi hover */
-}
-
-.social-container a:hover {
-    color: #007bff; /* Màu của icon khi hover */
-}
-
-
-</style>
-
-            
-</div>
-
-
-        
- 
-  
-
-
 </body>
-
 </html>
-
-
-
-
-
-
