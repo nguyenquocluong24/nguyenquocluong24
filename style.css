@@ -1,54 +1,155 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Ngăn thanh cuộn ngang */
-    background-color: #f0f2f5;
-    /* Cấu trúc Flexbox để căn giữa các container */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    margin: 0;
+
+    padding: 0;
+
+    height: 100%;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden; /* Ngăn thanh cuộn ngang */
+
+    background-color: #f0f2f5;
+
+    /* Cấu trúc Flexbox để căn giữa các container */
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
 }
+
+
 
 .video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: -1;
+
 }
 
+
+
 #background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
 }
+
+
+
+/* Các style chính mà bạn thiếu */
+
+.profile-container {
+
+    max-width: 900px;
+
+    width: 90%;
+
+    background-color: #c4424259;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    margin: 20px 0; /* Đặt lề trên và dưới */
+
+    z-index: 1; /* Đảm bảo nó hiển thị trên video */
+
+}
+
+
+
+.social-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    max-width: 900px;
+
+    width: 90%;
+
+    z-index: 1;
+
+}
+
 
 
 .social-container a {
-    color: #333;
-    font-size: 30px;
-    transition: color 0.3s ease;
+
+    color: #333;
+
+    font-size: 30px;
+
+    transition: color 0.3s ease;
+
 }
+
+
 
 .social-container a:hover {
-    color: #007bff;
+
+    color: #007bff;
+
 }
+
+
 
 #music-toggle {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
-    z-index: 2;
-}
 
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    padding: 12px 20px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #fff;
+
+    color: #000;
+
+    z-index: 2;
+
+}
