@@ -68,8 +68,19 @@
     margin-right: auto;
     transition: transform 0.3s ease-in-out;
     object-fit: cover; /* Đảm bảo ảnh avatar không bị méo */
-
 }
+        .circle {
+         width: 150px;
+         height: 150px;
+         boroler-radius: 50%;  
+         overflow: hidden;
+         position: relative;
+         box-shadow;
+            0 0 10px 4px rgba (220, 20, 60, 1),
+            0 0 40px 11px rgba (220, 20, 60, 0.25),
+            0 0 60px 21px rgba (220, 20, 60, 0.15),
+            animetion: pulse 3s infinite case-in-out;
+        }
 .avatar:hover {
     transform: scale(1.1) rotate(3deg);   
 }
@@ -161,8 +172,11 @@
     <div class="profile-container">
         <div class="header"></div>
         <div class="avatar-container">
+         <div class="circle">   
         <img src="avt.jpg" alt="Avatar" class="avatar" id="avatar-image">
+            
 </div>  
+        </div>
         <div class="info">
             <h1 id="user-name">NGUYỄN QUỐC LƯƠNG</h1>
             <h2 id="user-nickname">𝙆𝙚𝙧𝙤𝙇𝙪𝙤𝙣𝙜</h2>
@@ -211,6 +225,7 @@
     </script>
 </body>
 </html>
+
 
 
 
