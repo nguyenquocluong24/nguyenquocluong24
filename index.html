@@ -55,45 +55,76 @@
             text-align: center;
         }
 
+        .avatar-container {
+            display: flex;
+            justify-content: center;
+            margin-top: -75px;
+            position: relative;
+            z-index: 10;
+        }
   
         .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #fff;  
-    margin-top: -75px;
-    background-color: #ccc;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.3s ease-in-out;
-    object-fit: cover; /* Đảm bảo ảnh avatar không bị méo */
-}
-        .circle {
-         width: 150px;
-         height: 150px;
-         boroler-radius: 50%;  
-         overflow: hidden;
-         position: relative;
-         box-shadow;
-            0 0 10px 4px rgba (220, 20, 60, 1),
-            0 0 40px 11px rgba (220, 20, 60, 0.25),
-            0 0 60px 21px rgba (220, 20, 60, 0.15),
-            animetion: pulse 3s infinite case-in-out;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            margin: 0;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+            object-fit: cover;
         }
-.avatar:hover {
-    transform: scale(1.1) rotate(3deg);   
-}
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            border: 4px solid #fff;
+            box-shadow:
+                0 0 10px 4px rgba(220, 20, 60, 1),
+                0 0 40px 11px rgba(220, 20, 60, 0.25),
+                0 0 60px 21px rgba(220, 20, 60, 0.15);
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow:
+                    0 0 10px 4px rgba(220, 20, 60, 1),
+                    0 0 40px 11px rgba(220, 20, 60, 0.25),
+                    0 0 60px 21px rgba(220, 20, 60, 0.15);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow:
+                    0 0 20px 8px rgba(255, 105, 135, 1),
+                    0 0 60px 22px rgba(255, 105, 135, 0.5),
+                    0 0 90px 31px rgba(255, 105, 135, 0.3);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow:
+                    0 0 10px 4px rgba(220, 20, 60, 1),
+                    0 0 40px 11px rgba(220, 20, 60, 0.25),
+                    0 0 60px 21px rgba(220, 20, 60, 0.15);
+            }
+        }
+
+        .avatar:hover {
+            transform: scale(1.1) rotate(3deg);   
+        }
+
         .info {
             padding: 40px;
             text-align: center;
         }
 
         .info h1 {
-            font-family: 'Dancing Script', cursive;  /* Thay đổi font chữ ở đây */
-             color: #00ff66;
-    font-weight: 800;       
-    text-shadow: 0 0 8px #00ff66, 0 0 16px #00cc55;  
+            font-family: 'Dancing Script', cursive;
+            color: #00ff66;
+            font-weight: 800;       
+            text-shadow: 0 0 8px #00ff66, 0 0 16px #00cc55;  
         }
 
         .info h2 {
@@ -104,8 +135,8 @@
 
         .info p {
             margin: 0;         
-           font-family: 'Press Start 2P', cursive;
-    color: #ddd;
+            font-family: 'Press Start 2P', cursive;
+            color: #ddd;
         }
 
         .social-container {               
@@ -130,20 +161,6 @@
 
         .social-container a:hover {                 
             color: #0d4af3;
-        }
-
-        #music-toggle {                       
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            padding: 12px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #000;
-            z-index: 2;
         }
 
         #music-player {
@@ -171,15 +188,16 @@
 
     <div class="profile-container">
         <div class="header"></div>
+        
         <div class="avatar-container">
-         <div class="circle">   
-        <img src="avt.jpg" alt="Avatar" class="avatar" id="avatar-image">
-            
-</div>  
+            <div class="circle">   
+                <img src="avt.jpg" alt="Avatar" class="avatar" id="avatar-image">
+            </div>  
         </div>
+        
         <div class="info">
             <h1 id="user-name">NGUYỄN QUỐC LƯƠNG</h1>
-            <h2 id="user-nickname">𝙆𝙚𝙧𝙤𝙇𝙪𝙤𝙣𝙜</h2>
+            <h2 id="user-nickname">𝙆𝙚𝙧𝙤𝙇uce</h2>
             <p id="user-location">Quê quán: PHÚ THỌ</p>
             <p id="user-dob">Ngày sinh: 01/04/2004</p>
             <p id="user-job">Nghề nghiệp: du học NHẬT BẢN</p>
@@ -198,12 +216,10 @@
         </a>
     </div>
 
-    <!-- Nhạc nền -->
     <audio id="background-music" loop>
         <source src="nhac.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Thanh phát nhạc -->
     <audio id="music-player" controls>
         <source src="nhac.mp3" type="audio/mpeg">
         Trình duyệt không hỗ trợ phát nhạc.
@@ -211,21 +227,14 @@
 
     <script>
         const music = document.getElementById("background-music");
-        const toggleBtn = document.getElementById("music-toggle");
 
-        toggleBtn.addEventListener("click", () => {
+        document.addEventListener('click', function() {
             if (music.paused) {
-                music.play();
-                toggleBtn.textContent = "Tắt Nhạc";
-            } else {
-                music.pause();
-                toggleBtn.textContent = "Bật Nhạc";
+                 music.play().catch(error => {
+                    console.log("Tự động phát nhạc bị chặn:", error);
+                 });
             }
-        });
+        }, { once: true });
     </script>
 </body>
 </html>
-
-
-
-
